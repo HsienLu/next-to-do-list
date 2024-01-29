@@ -1,8 +1,6 @@
 "use client";
 import React, {use, useEffect, useState} from "react";
-let token: any =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiItTnBJcEFtREZfMS1UMTVHbk5hQSIsIm5pY2tuYW1lIjoiMTIzNDU2NzgiLCJpYXQiOjE3MDY1MDg0NjksImV4cCI6MTcwNjc2NzY2OX0.YXyD1ZonAPwpr28Q-1WYu3BEUwGvzXNXSMRl3KhgTC0";
-
+const token: any = localStorage.getItem("token");
 export default function Todo() {
   console.log(token);
   const [todo, setTodo] = useState<{data: any[]}>({data: []}); // Update the type of todo state
