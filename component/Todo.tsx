@@ -103,10 +103,6 @@ export default function Todo() {
     console.log(data);
     check();
   };
-  useEffect(() => {
-    // fetcher();
-    check();
-  }, []);
 
   return (
     <>
