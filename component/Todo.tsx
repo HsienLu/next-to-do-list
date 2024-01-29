@@ -1,6 +1,9 @@
 "use client";
 import React, {use, useEffect, useState} from "react";
-const token: any = localStorage.getItem("token");
+let token: any = "";
+if (typeof window !== "undefined") {
+  token = localStorage.getItem("token");
+}
 export default function Todo() {
   console.log(token);
   const [todo, setTodo] = useState<{data: any[]}>({data: []}); // Update the type of todo state
