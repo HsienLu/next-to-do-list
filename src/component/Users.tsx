@@ -1,4 +1,3 @@
-"use client";
 import React, {useEffect, useState} from "react";
 
 interface fetchMessage {
@@ -123,16 +122,16 @@ export default function Users() {
           {fetchMessage.status === ""
             ? null
             : fetchMessage.status === false
-              ? fetchMessage.message
-              : "註冊成功" + (fetchMessage.uid || "")}
+            ? fetchMessage.message
+            : "註冊成功" + (fetchMessage.uid || "")}
         </p>
         <p style={{width: "100%", wordWrap: "break-word"}}>
           登入狀態:
           {loginMessage.status === ""
             ? null
             : loginMessage.status === false
-              ? loginMessage.message
-              : "登入成功" + (loginMessage.token || "")}
+            ? loginMessage.message
+            : "登入成功" + (loginMessage.token || "")}
         </p>
       </div>
     </>

@@ -1,6 +1,5 @@
-"use client";
-import Users from "@/component/Users";
-import Todo from "@/component/Todo";
+import Users from "./component/Users";
+import Todo from "./component/Todo";
 export default function todolistPage() {
   return (
     <>
