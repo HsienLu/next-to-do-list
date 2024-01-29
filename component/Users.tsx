@@ -1,6 +1,5 @@
 "use client";
 import React, {useEffect, useState} from "react";
-import Cookies from "js-cookie";
 
 interface fetchMessage {
   status: boolean | string;
@@ -54,8 +53,6 @@ export default function Users() {
       setFetchMessage(data);
     } else {
       setLoginMessage(data);
-      Cookies.set("token", data.token || "");
-      console.log(data);
     }
   };
 

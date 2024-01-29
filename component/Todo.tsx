@@ -1,17 +1,13 @@
 "use client";
 import React, {use, useEffect, useState} from "react";
-import Cookies from "js-cookie";
-let token: any = "";
+let token: any =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiItTnBJcEFtREZfMS1UMTVHbk5hQSIsIm5pY2tuYW1lIjoiMTIzNDU2NzgiLCJpYXQiOjE3MDY1MDg0NjksImV4cCI6MTcwNjc2NzY2OX0.YXyD1ZonAPwpr28Q-1WYu3BEUwGvzXNXSMRl3KhgTC0";
 
 export default function Todo() {
-  token = Cookies.get("token");
-
   console.log(token);
   const [todo, setTodo] = useState<{data: any[]}>({data: []}); // Update the type of todo state
   const [addContent, setAddContent] = useState<{}>({content: ""});
-  useEffect(() => {
-    console.log(addContent);
-  }, [addContent]);
+
   const handdleChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setAddContent({...addContent, [e.target.name]: e.target.value});
   //check
