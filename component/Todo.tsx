@@ -1,10 +1,11 @@
 "use client";
 import React, {use, useEffect, useState} from "react";
+import Cookies from "js-cookie";
 let token: any = "";
-if (typeof window !== "undefined") {
-  token = localStorage.getItem("token");
-}
+
 export default function Todo() {
+  token = Cookies.get("token");
+
   console.log(token);
   const [todo, setTodo] = useState<{data: any[]}>({data: []}); // Update the type of todo state
   const [addContent, setAddContent] = useState<{}>({content: ""});
